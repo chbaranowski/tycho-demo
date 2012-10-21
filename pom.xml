@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.seitenbau.demo</groupId>
+	<artifactId>com.seitenbau.demo.tycho</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<packaging>pom</packaging>
+
+	<properties>
+		<tycho-version>0.16.0</tycho-version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<pomDependencies>consider</pomDependencies>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>default</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<modules>
+				<module>core</module>
+				<module>core.test</module>
+				<module>feature</module>
+				<module>product</module>
+			</modules>
+			<repositories>
+				<repository>
+					<id>osgi-demo-repository</id>
+					<layout>p2</layout>
+					<url>file://${basedir}/../repository/target/repository</url>
+				</repository>
+			</repositories>
+		</profile>
+		<profile>
+			<id>repository</id>
+			<modules>
+				<module>3rdparty</module>
+				<module>repository</module>
+			</modules>
+			<dependencies>
+				<dependency>
+					<groupId>org.apache.felix</groupId>
+					<artifactId>org.apache.felix.webconsole</artifactId>
+					<version>4.0.0</version>
+				</dependency>
+				<dependency>
+					<groupId>commons-io</groupId>
+					<artifactId>commons-io</artifactId>
+					<version>1.4</version>
+				</dependency>
+			</dependencies>
+			<repositories>
+				<repository>
+					<id>juno</id>
+					<layout>p2</layout>
+					<url>http://download.eclipse.org/releases/juno/</url>
+				</repository>
+			</repositories>
+		</profile>
+	</profiles>
+
+</project>

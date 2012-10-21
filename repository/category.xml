@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.equinox.core.sdk_3.8.0.v20120522-1813-85FAcGbFFoYTldJrUNk3a52oHJ.jar" id="org.eclipse.equinox.core.sdk" version="3.8.0.v20120522-1813-85FAcGbFFoYTldJrUNk3a52oHJ"/>
+   <feature url="features/org.eclipse.equinox.executable_3.6.0.v20120522-1813-7P7OG2BFLWUl7UmbVUO9iCm.jar" id="org.eclipse.equinox.executable" version="3.6.0.v20120522-1813-7P7OG2BFLWUl7UmbVUO9iCm"/>
+   <feature url="features/com.seitenbau.demo.tycho.3rdparty_1.0.0.qualifier.jar" id="com.seitenbau.demo.tycho.3rdparty" version="1.0.0.qualifier"/>
+   <feature url="features/org.eclipse.equinox.sdk_3.8.0.v20120522-1841-7M7fA78g5_y-g-jtHxcd5k8q8lFR.jar" id="org.eclipse.equinox.sdk" version="3.8.0.v20120522-1841-7M7fA78g5_y-g-jtHxcd5k8q8lFR"/>
+</site>

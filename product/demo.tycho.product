@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="Demo Tycho Product" uid="tycho.osgi.app" id="com.seitenbau.demo.tycho.product" application="example-bundle.application" version="1.0.0.qualifier" useFeatures="false" includeLaunchers="true">
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <vmArgs>-Declipse.ignoreApp=true 
+-Dosgi.noShutdown=true 
+-Dorg.osgi.service.http.port=8080
+-Dosgi.console</vmArgs>
+   </launcherArgs>
+
+   <launcher>
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+      <linux include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</linux>
+      <macos include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</macos>
+      <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</windows>
+   </vm>
+
+   <plugins>
+      <plugin id="com.seitenbau.demo.tycho.core"/>
+      <plugin id="javax.servlet"/>
+      <plugin id="org.apache.commons.fileupload"/>
+      <plugin id="org.apache.commons.io"/>
+      <plugin id="org.apache.felix.gogo.command"/>
+      <plugin id="org.apache.felix.gogo.runtime"/>
+      <plugin id="org.apache.felix.gogo.shell"/>
+      <plugin id="org.apache.felix.webconsole"/>
+      <plugin id="org.eclipse.core.contenttype"/>
+      <plugin id="org.eclipse.core.jobs"/>
+      <plugin id="org.eclipse.core.runtime"/>
+      <plugin id="org.eclipse.equinox.app"/>
+      <plugin id="org.eclipse.equinox.common"/>
+      <plugin id="org.eclipse.equinox.console"/>
+      <plugin id="org.eclipse.equinox.http.jetty"/>
+      <plugin id="org.eclipse.equinox.http.servlet"/>
+      <plugin id="org.eclipse.equinox.preferences"/>
+      <plugin id="org.eclipse.equinox.registry"/>
+      <plugin id="org.eclipse.jetty.continuation"/>
+      <plugin id="org.eclipse.jetty.http"/>
+      <plugin id="org.eclipse.jetty.io"/>
+      <plugin id="org.eclipse.jetty.security"/>
+      <plugin id="org.eclipse.jetty.server"/>
+      <plugin id="org.eclipse.jetty.servlet"/>
+      <plugin id="org.eclipse.jetty.util"/>
+      <plugin id="org.eclipse.osgi"/>
+      <plugin id="org.eclipse.osgi.services"/>
+      <plugin id="org.json"/>
+   </plugins>
+
+   <features>
+      <feature id="com.seitenbau.demo.tycho.feature"/>
+   </features>
+
+   <configurations>
+      <plugin id="com.seitenbau.demo.tycho.core" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.felix.webconsole" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.console" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.http.jetty" autoStart="true" startLevel="0" />
+   </configurations>
+
+</product>

@@ -1,0 +1,3 @@
+--platform=equinox
+
+mvn:com.seitenbau.demo/com.seitenbau.demo.tycho.core/1.0.0-SNAPSHOT
