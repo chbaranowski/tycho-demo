@@ -4,8 +4,13 @@ TBD
 
 ## Build Project 
 
-1. mvn package -Prepository
-2. mvn install
+1. Build the P2 repository (Internet connection is needed)
+
+   mvn package -Prepository
+   
+2. Build the bundle and product (no online p2 repository is needed)
+
+   mvn install
 
 ## Links
 
