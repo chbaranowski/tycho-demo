@@ -14,6 +14,8 @@ A simple tycho demo. The demo shows:
 
 ## Build Project 
 
+Requires apache maven version >= 3.X
+
 1. Build the P2 repository (Internet connection is needed)
 
    mvn package -Prepository
